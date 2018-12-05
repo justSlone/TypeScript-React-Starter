@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Hello.css';
+import { getClassNames } from './Hello.classNames';
 
 export interface Props {
   name: string;
@@ -13,8 +13,10 @@ function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
 
+  const { hello } = getClassNames();
+
   return (
-    <div className="hello">
+    <div className={hello}>
       <div className="greeting">
         Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>

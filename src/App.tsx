@@ -1,17 +1,18 @@
 import * as React from 'react';
-import './App.css';
+import { getClassNames } from './App.classNames'
 import Hello from './containers/Hello';
 
 const logo = require('./logo.svg');
 
 function App() {
+  const { app, appHeader, appIntro, appLogo } = getClassNames();
   return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={app}>
+      <div className={appHeader}>
+        <img src={logo} className={appLogo} alt="logo" />
         <h2>Welcome to React</h2>
       </div>
-      <p className="App-intro">
+      <p className={appIntro}>
         To get started, edit <code>src/App.tsx</code> and save to reload.
       </p>
       <Hello />

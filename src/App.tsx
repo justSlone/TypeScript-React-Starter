@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { getClassNames } from './App.classNames'
-import Hello from './containers/Hello';
+import Hello from './containers/Hello'
 
 const logo = require('./logo.svg');
 
